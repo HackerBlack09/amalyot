@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    max-width: 1300px;
 }
 
 .nav1 {
@@ -927,6 +928,85 @@ a {
     padding: 2px;
 }
 
+.cardsor_big {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 200px;
+}
+
+.hrstd {
+    width: 600px;
+    height: 3px;
+    background-color: rgba(128, 128, 128, 0.212);
+}
+
+.best_prikess {
+    display: flex;
+    line-height: 200%;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.adser {
+    background-color: #33A0FF;
+    border: none;
+    outline: none;
+    color: white;
+    width: 150px;
+    cursor: pointer;
+}
+
+.dekst {
+    background-color: red;
+    color: white;
+    border: none;
+    outline: none;
+    width: 100px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.coldelad {
+    margin-top: 20px;
+}
+
+.modal_oyna {
+    width: 100%;
+    height: 100%;
+    background-color: #3c3c3c75;
+    position: fixed;
+    z-index: 2;
+    top: -100%;
+    opacity: 0;
+    left: 0;
+    backdrop-filter: blur(7px);
+    transition: 0.3s ease-in-out;
+}
+
+.span {
+    margin: 20px;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.filghft {
+    width: 150px;
+    border: none;
+    outline: none;
+    background-color: #33A0FF;
+    color: white;
+    height: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+.delbac {
+    display: none;
+}
+
 /* ----------------media---------------- */
 
 @media (max-width:1180px) {
@@ -936,7 +1016,7 @@ a {
     }
 
     .runnigs {
-       display: none;
+        display: none;
     }
 
     .us_bus {
@@ -1040,6 +1120,32 @@ a {
         flex-direction: column;
         justify-content: center;
         padding: 0;
+    }
+
+    .filghft {
+        display: block;
+    }
+
+    .bags_categry {
+        width: 100%;
+        height: 100%;
+        background-color: #3c3c3c75;
+        position: fixed;
+        z-index: 2;
+        top: 0px;
+        opacity: 1;
+        left: 0;
+        backdrop-filter: blur(7px);
+        transition: 0.3s ease-in-out;
+        padding: 0px 180px;
+    }
+
+    .delbac {
+        display: block;
+        display: flex;
+        font-size: 20px;
+        color: white;
+        padding: 10px 400px;
     }
 }
 
@@ -1199,13 +1305,13 @@ a {
         height: 50px;
         outline: none;
     }
-    
+
     .in2 {
         width: 300px;
         height: 50px;
         outline: none;
     }
-    
+
     .in3 {
         width: 300px;
         height: 150px;
@@ -1216,13 +1322,13 @@ a {
         width: 300px;
         height: 400px;
     }
-    
+
     .imss1 {
         width: 300px;
         height: 300px;
         margin-top: 50px;
     }
-    
+
 }
 
 @media (max-width:320px) {

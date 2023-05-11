@@ -58,7 +58,8 @@ export function Cart() {
       confirmButtonText: "Ha, o'chirib tashlang!",
     }).then((result) => {
       if (result.isConfirmed) {
-        setlocal(local.filter((val) => val.id !== id));
+        localStorage.setItem('local', JSON.stringify(local.filter((val) => val.id !== id)));
+        refresh()
         Swal.fire("O'chirildi!", "Faylingiz o'chirildi.", "success");
       }
     });

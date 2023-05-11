@@ -12,7 +12,7 @@ import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai"
 import { HiBars3 } from "react-icons/hi2"
 import Rating from '@mui/material/Rating';
 import Swal from "sweetalert2";
-import { Sliders } from "../Companets/slid"
+import Sliders from "../Companets/slid"
 
 
 export function Bags() {
@@ -106,20 +106,29 @@ export function Bags() {
 
     function likefun(item) {
         localStorage.setItem(
-          "local",
-          JSON.stringify(
-            local.map((val) =>
-              val.id === item.id ? { ...val, like: !val.like } : val
+            "local",
+            JSON.stringify(
+                local.map((val) =>
+                    val.id === item.id ? { ...val, like: !val.like } : val
+                )
             )
-          )
         );
         refresh();
-      }
+    }
+
+    const [modal, setModal] = useState(false);
+
+    const filter = () => {
+        setModal(!modal)
+    }
+
 
     return (
         <>
             <div className="bags_big">
-                <div className="bags_categry">
+                <button className="filghft" onClick={filter}>Filter</button>
+                <div className="bags_categry" >
+                    <p className="delbac">X</p>
                     <div className="filter_cate">
                         <h1 className="fil">Category</h1>
                         <div className="filter_catgory">
@@ -145,7 +154,7 @@ export function Bags() {
                                 <p>Ranger: </p>
                                 <p>$13.99 - $25.99</p>
                             </div>
-                            <p className="sld"><Sliders /></p>
+                            <p className="sld"><Sliders setValue={setValue} value={value} /></p>
                         </div>
                     </div>
                     <div className="filter_color">

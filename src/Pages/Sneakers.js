@@ -12,7 +12,7 @@ import { AiOutlineHeart, AiOutlineShoppingCart } from "react-icons/ai"
 import { HiBars3 } from "react-icons/hi2"
 import Rating from '@mui/material/Rating';
 import Swal from "sweetalert2";
-import { Sliders } from "../Companets/slid"
+import  Sliders  from "../Companets/slid"
 
 
 export function Sneakers() {
@@ -134,7 +134,7 @@ export function Sneakers() {
                                 <p>Ranger: </p>
                                 <p>$13.99 - $25.99</p>
                             </div>
-                            <p className="sld"><Sliders /></p>
+                            <p className="sld"><Sliders setValue={setValue} value={value} /></p>
                         </div>
                     </div>
                     <div className="filter_color">
